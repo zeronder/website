@@ -9,10 +9,12 @@ def hello_world():
 
 @app.route("/generatefile", methods=['GET'])
 def generate_file():
+    print("run generatefile ....................................")
     filepath = 'genefile.txt'
     content = "this is generage ifle"
     with open(filepath, 'w') as file:
         file.write(content)
+        print("generated .........................................")
     return "<p>file generated successfully</p>"
 
 if __name__ == "__main__":
